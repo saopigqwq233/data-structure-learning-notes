@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.24"
+						"string" : "3.26"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Stack::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Stack-Debug-84a8aeb7f39097982ef9.json",
+					"jsonFile" : "target-Stack-Debug-64b4379e4294ef497f0c.json",
 					"name" : "Stack",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/my_credit/data-structure-learning-notes/Stack/cmake-build-debug",
-		"source" : "E:/my_credit/data-structure-learning-notes/Stack"
+		"build" : "C:/bite/data-structure-learning-notes/Stack/cmake-build-debug",
+		"source" : "C:/bite/data-structure-learning-notes/Stack"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 5
 	}
 }

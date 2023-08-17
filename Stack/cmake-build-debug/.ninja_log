@@ -1,0 +1,8 @@
+# ninja log v5
+0	165	7139483534127354	CMakeFiles/Stack.dir/main.c.obj	c75b209b5d8bdf15
+17	169	7139483534132388	CMakeFiles/Stack.dir/stack.c.obj	396c44c3c62fb44f
+3	146	7139485496751303	CMakeFiles/Stack.dir/main.c.obj	c75b209b5d8bdf15
+20	169	7139485496984073	CMakeFiles/Stack.dir/stack.c.obj	396c44c3c62fb44f
+170	335	7139485498616199	Stack.exe	40f7e12a68930760
+3	125	7139485687851187	CMakeFiles/Stack.dir/stack.c.obj	396c44c3c62fb44f
+126	270	7139485689278258	Stack.exe	40f7e12a68930760
