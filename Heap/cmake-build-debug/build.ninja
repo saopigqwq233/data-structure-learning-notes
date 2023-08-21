@@ -61,6 +61,12 @@ build CMakeFiles/Heap.dir/Heap.c.obj: C_COMPILER__Heap_unscanned_Debug C$:/bite/
   OBJECT_DIR = CMakeFiles\Heap.dir
   OBJECT_FILE_DIR = CMakeFiles\Heap.dir
 
+build CMakeFiles/Heap.dir/TopKtest.c.obj: C_COMPILER__Heap_unscanned_Debug C$:/bite/data-structure-learning-notes/Heap/TopKtest.c || cmake_object_order_depends_target_Heap
+  DEP_FILE = CMakeFiles\Heap.dir\TopKtest.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Heap.dir
+  OBJECT_FILE_DIR = CMakeFiles\Heap.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Heap
@@ -69,7 +75,7 @@ build CMakeFiles/Heap.dir/Heap.c.obj: C_COMPILER__Heap_unscanned_Debug C$:/bite/
 #############################################
 # Link the executable Heap.exe
 
-build Heap.exe: C_EXECUTABLE_LINKER__Heap_Debug CMakeFiles/Heap.dir/main.c.obj CMakeFiles/Heap.dir/Heap.c.obj
+build Heap.exe: C_EXECUTABLE_LINKER__Heap_Debug CMakeFiles/Heap.dir/main.c.obj CMakeFiles/Heap.dir/Heap.c.obj CMakeFiles/Heap.dir/TopKtest.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Heap.dir

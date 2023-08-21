@@ -6,4 +6,5 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(Heap main.c
         Heap.c
-        Heap.h)
+        Heap.h
+        TopKtest.c)
