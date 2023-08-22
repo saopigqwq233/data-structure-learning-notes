@@ -9,7 +9,7 @@ BTNode *BuyNode(int val)
     return null;
     }
     //初始化节点
-    node->data = val;
+    node->val = val;
     node->left = node->right = null;
     return node;
 }
@@ -32,7 +32,7 @@ void PreOrder(BTNode* root)
         printf("# ");
         return;
     }
-    printf("%d ",root->data);
+    printf("%d ",root->val);
     PreOrder(root->left);
     PreOrder(root->right);
 }
@@ -44,7 +44,7 @@ void InOrder(BTNode* root)
         return;
     }
     InOrder(root->left);
-    printf("%d ",root->data);
+    printf("%d ",root->val);
     InOrder(root->right);
 }
 
@@ -57,7 +57,7 @@ void PostOrder(BTNode* root)
     }
     PostOrder(root->left);
     PostOrder(root->right);
-    printf("%d ",root->data);
+    printf("%d ",root->val);
 }
 
 BTNode *CreatBinaryTree()
@@ -86,19 +86,87 @@ BTNode *CreatBinaryTree()
     node4->left=node8;
     node4->right=node9;
 
-    node5->left=node10;
-    node5->right=node11;
+    node5->left=null;
+    node5->right=null;
 
     node6->left=null;
     node6->right=null;
 
     node7->left=null;
-    node7->right=null;
+    node7->right=node11;
 
     node8->left=node8->right=null;
     node9->left=node9->right=null;
     node10->left=node10->right=null;
-    node11->left=node11->right=null;
+    node11->left=node10;
+    node11->right=null;
 
     return node1;
+}
+
+int BTSize(BTNode* root)
+{
+    //法一：判断
+/*    if(root==null)
+    {
+        return 0;
+    }
+    return BTSize(root->left)+ BTSize(root->_right)+1;
+    */
+    //法二：三目运算
+    return root==null?0:(BTSize(root->left) + BTSize(root->right) + 1);
+}
+int BTLeaveSize(BTNode* root)
+{
+    if(root==null)
+        return 0;
+    if(root->left==null&& root->right == null)
+        return 1;
+    return BTLeaveSize(root->left)+ BTLeaveSize(root->right);
+}
+int BTHeight(BTNode* root)
+{
+    //分治思想
+    //判断左/右数哪个度更高，返回1+（更大的数）
+
+    if(root==null)
+    {
+        return 0;
+    }
+    int lefttree= BTHeight(root->left);
+    int righttree= BTHeight(root->right);
+    return (lefttree>righttree)?(lefttree+1):(righttree+1);
+}
+
+
+bool isSameTree(BTNode* p, BTNode* q)
+{
+    //分治思想
+    //把p，q两棵树看作是一棵树的左右子树
+    //根节点相同，只要左右子树相同就说明p，q相同
+    if(p==null&&q==null)//两者都为空，返回对
+        return true;
+    if(p==null||q==null)//不可能两个都空，则一旦有一个空：  一个为空，一个不为空
+        return false;
+    else if(p->val==q->val)
+    {
+        bool lefttree=isSameTree(p->left,q->left);
+        bool righttree= isSameTree(p->right,q->right);
+        return lefttree&&righttree;
+    }
+}
+bool isUnivalTree(BTNode* root)
+{
+    //分治思想
+    //分别判断左右子树是否为单值
+    if(root==NULL)
+        return true;
+    if(root->left==NULL&&root->right==NULL)
+        return true;
+    if(root->left&&root->val!=root->left->val)
+        return false;
+    if(root->right&&root->val!=root->right->val)
+        return false;
+
+    return isUnivalTree(root->left)&& isUnivalTree(root->right);
 }
