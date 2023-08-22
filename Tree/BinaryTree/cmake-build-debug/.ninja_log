@@ -1,0 +1,9 @@
+# ninja log v5
+54	939	7143885293523888	CMakeFiles/BinaryTree.dir/BinaryTree.c.obj	e19c34dea589e65e
+1	979	7143885293923957	CMakeFiles/BinaryTree.dir/main.c.obj	f7cafad0ced450fc
+979	1293	7143885297060134	BinaryTree.exe	47f18f181ae10210
+3	121	7143886521840634	CMakeFiles/BinaryTree.dir/main.c.obj	f7cafad0ced450fc
+18	138	7143886522016563	CMakeFiles/BinaryTree.dir/BinaryTree.c.obj	e19c34dea589e65e
+138	284	7143886523462233	BinaryTree.exe	47f18f181ae10210
+2	122	7143887154541282	CMakeFiles/BinaryTree.dir/BinaryTree.c.obj	e19c34dea589e65e
+122	266	7143887155979516	BinaryTree.exe	47f18f181ae10210
