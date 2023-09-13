@@ -16,5 +16,6 @@ void QuickSort(int *a,int left,int right);
 int PartSort1(int* a, int left, int right);
 int PartSort2(int* a, int left, int right);
 int PartSort3(int* a, int left, int right);
+void Swap(int *a,int *b);
 
 #endif //SORT_PRE_H

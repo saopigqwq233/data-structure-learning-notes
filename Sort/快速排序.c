@@ -1,10 +1,16 @@
 #include "pre.h"
+void Swap(int *a,int *b)
+{
+    int tmp=*a;
+    *a=*b;
+    *b=tmp;
+}
 void QuickSort(int *a,int left,int right)
 {
     if(left>=right)//数组长度为1或0，已是排好序的状态
         return;
 
-    int pivot= PartSort2(a,left,right);//选取范围的pivot并把小于[pivot]的元素放左面，大于的在pivot右面
+    int pivot= PartSort1(a,left,right);//选取范围的pivot并把小于[pivot]的元素放左面，大于的在pivot右面
     QuickSort(a,left,pivot-1);
     QuickSort(a,pivot+1,right);
 }
@@ -24,24 +30,42 @@ int PartSort1(int* a, int left, int right)
         while (left!=right&&a[left]<=a[key])
             left++;
 
-        int tmp=a[left];
-        a[left]=a[right];
-        a[right]=tmp;
+        Swap(&a[left],&a[right]);
     }
-    int tmp=a[key];
-    a[key]=a[left];
-    a[left]=tmp;
+    Swap(&a[key],&a[left]);
     return left;
 }
 
+
 int PartSort2(int* a, int left, int right)
+{
+    int pivot = (left+right)/2;
+    //设置一个hole坑，并把[hole]的值key提取出来
+    //right先左移找到小于key值的[right]
+    //[right]换到坑中
+    //left右移找到大于key值的[left]
+    //[left]换到坑中
+    //left和right相遇，由于[right]此时是小于key的
+    Swap(&a[left],&a[pivot]);
+
+    int key=a[left];
+    int hole=left;
+    while (left<right)
+    {
+        while (right>left&&a[right]>=key)
+        {
+            right--;
+        }
+    }
+}
+
+
+int PartSort3(int* a, int left, int right)
 {
     int pivot=(left+right)/2;
 
     //把[pivot]换到最右面
-    int tmp=a[right];
-    a[right]=a[pivot];
-    a[pivot]=tmp;
+    Swap(&a[right],&a[pivot]);
 
     //设置i=left,j=left,j变量遍历left-right
     //当遇到[j]<[right]，就让[i]和[j]互换,并让i加1
@@ -54,20 +78,12 @@ int PartSort2(int* a, int left, int right)
     {
         if(a[j]<a[right])
         {
-            int var=a[j];
-            a[j]=a[i];
-            a[i]=var;
+            Swap(&a[i],&a[j]);
             i++;
         }
         j++;
     }
-    int var=a[right];
-    a[right]=a[i];
-    a[i]=var;
+    Swap(&a[right],&a[i]);
     return i;
 }
 
-int PartSort3(int* a, int left, int right)
-{
-
-}

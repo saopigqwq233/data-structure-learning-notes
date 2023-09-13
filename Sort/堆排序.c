@@ -1,10 +1,4 @@
 #include "pre.h"
-void Swap(int *a,int *b)
-{
-    int tmp=*a;
-    *a=*b;
-    *b=tmp;
-}
 void AdjustDwon(int* a, int n, int root)
 {
     int child=root*2+1;//假定是左叶子更大
