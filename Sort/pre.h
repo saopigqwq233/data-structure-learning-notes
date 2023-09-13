@@ -11,8 +11,10 @@ void ShellSort(int* a, int n);
 void SelectSort(int* a, int n);
 void AdjustDwon(int* a, int n, int root);
 void HeapSort(int* a, int n);
-
-
-
+void BubbleSort(int* a, int n);
+void QuickSort(int *a,int left,int right);
+int PartSort1(int* a, int left, int right);
+int PartSort2(int* a, int left, int right);
+int PartSort3(int* a, int left, int right);
 
 #endif //SORT_PRE_H

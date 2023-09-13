@@ -2,13 +2,17 @@
 
 int main()
 {
-    int a[]={100,928,32,133,133,53,24,28,183,854,266,6,12,432,120,28};
+    int a[]={15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0};
     int b[16];
     int c[16];
     int d[16];
+    int e[16];
+    int f[16];
     memcpy(b,a,sizeof (a));
     memcpy(c,a,sizeof (a));
     memcpy(d,a,sizeof (a));
+    memcpy(e,a,sizeof (a));
+    memcpy(f,a,sizeof (a));
     int size=sizeof (a)/sizeof(int );
     printf("原数组：");
     for (int i = 0; i < size; ++i)
@@ -56,5 +60,20 @@ int main()
     }
     printf("\n");
 
+    printf("冒泡排序：");
+    BubbleSort(e,size);
+    for (int i = 0; i < size; ++i)
+    {
+        printf("%d ",e[i]);
+    }
+    printf("\n");
+
+    printf("快速排序：\n");
+    QuickSort(f,0,size-1);
+    for (int i = 0; i < size; ++i)
+    {
+        printf("%d ",f[i]);
+    }
+    printf("\n");
     return 0;
 }

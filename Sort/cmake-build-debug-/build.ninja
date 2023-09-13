@@ -79,6 +79,18 @@ build CMakeFiles/Sort.dir/∂—≈≈–Ú.c.obj: C_COMPILER__Sort_unscanned_Debug C$:/bit
   OBJECT_DIR = CMakeFiles\Sort.dir
   OBJECT_FILE_DIR = CMakeFiles\Sort.dir
 
+build CMakeFiles/Sort.dir/√∞≈›≈≈–Ú.c.obj: C_COMPILER__Sort_unscanned_Debug C$:/bite/data-structure-learning-notes/Sort/√∞≈›≈≈–Ú.c || cmake_object_order_depends_target_Sort
+  DEP_FILE = CMakeFiles\Sort.dir\√∞≈›≈≈–Ú.c.obj.d
+  FLAGS = --coverage -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Sort.dir
+  OBJECT_FILE_DIR = CMakeFiles\Sort.dir
+
+build CMakeFiles/Sort.dir/øÏÀŸ≈≈–Ú.c.obj: C_COMPILER__Sort_unscanned_Debug C$:/bite/data-structure-learning-notes/Sort/øÏÀŸ≈≈–Ú.c || cmake_object_order_depends_target_Sort
+  DEP_FILE = CMakeFiles\Sort.dir\øÏÀŸ≈≈–Ú.c.obj.d
+  FLAGS = --coverage -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Sort.dir
+  OBJECT_FILE_DIR = CMakeFiles\Sort.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Sort
@@ -87,7 +99,7 @@ build CMakeFiles/Sort.dir/∂—≈≈–Ú.c.obj: C_COMPILER__Sort_unscanned_Debug C$:/bit
 #############################################
 # Link the executable Sort.exe
 
-build Sort.exe: C_EXECUTABLE_LINKER__Sort_Debug CMakeFiles/Sort.dir/main.c.obj CMakeFiles/Sort.dir/≤Â»Î≈≈–Ú.c.obj CMakeFiles/Sort.dir/œ£∂˚≈≈–Ú.c.obj CMakeFiles/Sort.dir/—°‘Ò≈≈–Ú.c.obj CMakeFiles/Sort.dir/∂—≈≈–Ú.c.obj
+build Sort.exe: C_EXECUTABLE_LINKER__Sort_Debug CMakeFiles/Sort.dir/main.c.obj CMakeFiles/Sort.dir/≤Â»Î≈≈–Ú.c.obj CMakeFiles/Sort.dir/œ£∂˚≈≈–Ú.c.obj CMakeFiles/Sort.dir/—°‘Ò≈≈–Ú.c.obj CMakeFiles/Sort.dir/∂—≈≈–Ú.c.obj CMakeFiles/Sort.dir/√∞≈›≈≈–Ú.c.obj CMakeFiles/Sort.dir/øÏÀŸ≈≈–Ú.c.obj
   FLAGS = --coverage -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Sort.dir

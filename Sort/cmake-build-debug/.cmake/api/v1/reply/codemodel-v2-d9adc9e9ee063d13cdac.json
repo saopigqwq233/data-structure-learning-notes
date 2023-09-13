@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Sort::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Sort-Debug-1955cac327d5f3f0cf15.json",
+					"jsonFile" : "target-Sort-Debug-2a0edfc10f7f732589f4.json",
 					"name" : "Sort",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/bite/data-structure-learning-notes/Sort/cmake-build-debug-",
+		"build" : "C:/bite/data-structure-learning-notes/Sort/cmake-build-debug",
 		"source" : "C:/bite/data-structure-learning-notes/Sort"
 	},
 	"version" : 

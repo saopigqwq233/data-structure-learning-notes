@@ -8,4 +8,6 @@ add_executable(Sort main.c
         pre.h
         希尔排序.c
         选择排序.c
-        堆排序.c)
+        堆排序.c
+        冒泡排序.c
+        快速排序.c)
