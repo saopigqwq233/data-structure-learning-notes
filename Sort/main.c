@@ -3,6 +3,11 @@
 int main()
 {
     int a[]={15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0};
+    srand(time(NULL));
+    for (int i = 0; i < 16; ++i)
+    {
+        a[i]=rand()%100;
+    }
     int b[16];
     int c[16];
     int d[16];
@@ -14,7 +19,7 @@ int main()
     memcpy(e,a,sizeof (a));
     memcpy(f,a,sizeof (a));
     int size=sizeof (a)/sizeof(int );
-    printf("原数组：");
+    printf("原数组：\n");
     for (int i = 0; i < size; ++i)
     {
         printf("%d ",a[i]);

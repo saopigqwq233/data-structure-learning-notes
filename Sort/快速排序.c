@@ -10,7 +10,7 @@ void QuickSort(int *a,int left,int right)
     if(left>=right)//数组长度为1或0，已是排好序的状态
         return;
 
-    int pivot= PartSort1(a,left,right);//选取范围的pivot并把小于[pivot]的元素放左面，大于的在pivot右面
+    int pivot= PartSort2(a,left,right);//选取范围的pivot并把小于[pivot]的元素放左面，大于的在pivot右面
     QuickSort(a,left,pivot-1);
     QuickSort(a,pivot+1,right);
 }
@@ -52,11 +52,22 @@ int PartSort2(int* a, int left, int right)
     int hole=left;
     while (left<right)
     {
-        while (right>left&&a[right]>=key)
+        while (left<right&&a[right]>=key)
         {
             right--;
         }
+        a[hole]=a[right];
+        hole=right;
+        while (left<right&&a[left]<=key)
+        {
+            left++;
+        }
+        a[hole]=a[left];
+        hole=left;
     }
+    //left此时==right
+    a[hole]=key;
+    return hole;
 }
 
 
