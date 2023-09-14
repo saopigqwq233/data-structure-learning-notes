@@ -65,7 +65,7 @@ int PartSort2(int* a, int left, int right)
         a[hole]=a[left];
         hole=left;
     }
-    //left此时==right
+    //left此时==right==hole
     a[hole]=key;
     return hole;
 }
