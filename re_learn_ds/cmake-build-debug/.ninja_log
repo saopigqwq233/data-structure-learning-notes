@@ -1,0 +1,12 @@
+# ninja log v5
+328	504	7299712314653670	re_learn_ds.exe	69ba820f2b4a30c0
+0	351	7303164394607384	CMakeFiles/re_learn_ds.dir/insertsort.cpp.obj	51ee7388a37ada19
+352	534	7303164396389379	re_learn_ds.exe	1a6f1e6c4eac713d
+4	312	7303165049813102	CMakeFiles/re_learn_ds.dir/insertsort.cpp.obj	51ee7388a37ada19
+313	480	7303165051450953	re_learn_ds.exe	1a6f1e6c4eac713d
+3	394	7303169757308996	CMakeFiles/re_learn_ds.dir/insertsort.cpp.obj	51ee7388a37ada19
+395	552	7303169758846926	re_learn_ds.exe	1a6f1e6c4eac713d
+3	350	7303169993078654	CMakeFiles/re_learn_ds.dir/insertsort.cpp.obj	51ee7388a37ada19
+350	511	7303169994686112	re_learn_ds.exe	1a6f1e6c4eac713d
+3	296	7303170775205362	CMakeFiles/re_learn_ds.dir/insertsort.cpp.obj	51ee7388a37ada19
+297	457	7303170776776395	re_learn_ds.exe	1a6f1e6c4eac713d
