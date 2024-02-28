@@ -1,5 +1,7 @@
 #include "iostream"
 #include "cstdlib"
+#include "stack"
+#include "queue"
 #define QueueDType int
 #define N 10
 using namespace std;
@@ -234,31 +236,115 @@ void my_queue_2::swap(my_queue_2 &q) {
     this->capacity = tmp;
 }
 
-int main(){
-    srand(10);
-    my_queue_2 q1;
-    cout<<q1.empty()<<endl;
+//int main(){
+//    srand(10);
+//    my_queue_2 q1;
+//    cout<<q1.empty()<<endl;
+//
+//    for(int i=0;i<N;i++){
+//        q1.push(rand()%100);
+//    }
+//    q1.Print();
+//    cout<<q1.size()<<endl;
+////    cout<<q1.back()<<endl;
+////    cout<<q1.front()<<endl;
+//    q1.pop();
+//    q1.Print();
+//    my_queue_2 q2(q1);
+//    q2.Print();
+//    my_queue_2 q3;
+//    for(int i=0;i<14;i++){
+//        q3.push(rand()%100);
+//    }
+//    q3.Print();
+//    cout<<q3.size()<<endl;
+//    q3.swap(q2);
+//    q2.Print();
+//    return 0;
+//}
+//queue-->stack
+class my_queue_bystack{
+private:
+    stack<QueueDType>s_in,s_out;
+    int _size;
+    void exchange();
+public:
 
-    for(int i=0;i<N;i++){
-        q1.push(rand()%100);
+    my_queue_bystack():_size(0){}
+    bool empty()const;
+    int size()const;
+    QueueDType front();
+    QueueDType back();
+    void push(QueueDType val);
+    void pop();
+
+};
+void my_queue_bystack::exchange() {
+    if(s_out.empty())
+    while (!s_in.empty()){
+        s_out.push(s_in.top());
+        s_in.pop();
     }
-    q1.Print();
-    cout<<q1.size()<<endl;
-//    cout<<q1.back()<<endl;
-//    cout<<q1.front()<<endl;
-    q1.pop();
-    q1.Print();
-    my_queue_2 q2(q1);
-    q2.Print();
-    my_queue_2 q3;
-    for(int i=0;i<14;i++){
-        q3.push(rand()%100);
-    }
-    q3.Print();
-    cout<<q3.size()<<endl;
-    q3.swap(q2);
-    q2.Print();
-    return 0;
+    else if(s_in.empty())
+        while (!s_out.empty()){
+            s_in.push(s_out.top());
+            s_out.pop();
+        }
 }
 
+
+bool my_queue_bystack::empty() const {
+    return _size == 0;
+}
+
+int my_queue_bystack::size() const {
+    return _size;
+}
+
+QueueDType my_queue_bystack::front(){
+    if(s_in.empty()&&s_out.empty())
+        exit(1);
+    if(s_out.empty()){
+        exchange();
+    }
+    return s_out.top();
+}
+
+QueueDType my_queue_bystack::back() {
+    if(s_in.empty()&&s_out.empty())
+        exit(1);
+    if(s_in.empty()){
+        exchange();
+    }
+    return s_in.top();
+}
+
+void my_queue_bystack::push(int val) {
+    s_in.push(val);
+    _size++;
+}
+
+void my_queue_bystack::pop() {
+    if(s_in.empty()&&s_out.empty())
+        exit(1);
+    if(s_out.empty())
+        exchange();
+    s_out.pop();
+    _size--;
+}
+
+//int main(){
+//    my_queue_bystack q1;
+//    srand(10);
+//    q1.push(rand()%100);
+//    cout<<q1.front()<<endl;
+//    q1.push(rand()%100);
+//    cout<<q1.back()<<endl;
+//    q1.push(rand()%100);
+//    cout<<q1.back()<<endl;
+//    q1.pop();
+//    cout<<q1.front()<<endl;
+//    return 0;
+//}
+class
 
