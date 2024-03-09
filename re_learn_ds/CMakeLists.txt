@@ -5,7 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(re_ds
         MergeSort.cpp
-#        QuickSort.cpp
+#        my_Heap.cpp
+        #        QuickSort.cpp
 #        my_stack.cpp
 #        my_queue.cpp
         #        快排.cpp
